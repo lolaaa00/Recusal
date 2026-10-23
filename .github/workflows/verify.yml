@@ -1,0 +1,35 @@
+name: Verify Recusal
+env:
+  GENVM_VERSION: v0.2.12
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest==9.0.2
+      - run: python -m pytest tests -q
+      - run: python scripts/preflight.py
+  genvm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - run: genvm-lint check contracts/recusal.py
+      - run: genvm-lint validate contracts/recusal.py
+      - run: genvm-lint schema contracts/recusal.py
+      - run: genvm-lint typecheck contracts/recusal.py
+      - run: genvm-lint check contracts/panel_vote_gate.py
+      - run: genvm-lint validate contracts/panel_vote_gate.py
+      - run: genvm-lint schema contracts/panel_vote_gate.py
+      - run: genvm-lint typecheck contracts/panel_vote_gate.py
+      - run: python -m pytest direct_tests -v

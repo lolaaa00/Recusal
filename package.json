@@ -1,0 +1,13 @@
+{
+  "name": "recusal-studionet-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Recusal — consensus-backed committee conflict screening and deterministic substitution",
+  "devDependencies": {
+    "genlayer": "0.39.1"
+  },
+  "scripts": {
+    "preflight": "python scripts/preflight.py",
+    "network:verify": "python scripts/network_guard.py"
+  }
+}
