@@ -28,10 +28,11 @@
 ## To verify before submission
 
 - CI run against the actual `lolaaa00/recusal` GitHub repository: blocked; the
-  repository is not found and configured GitHub authorization is invalid.
+  repository is not found (GitHub authorization is now valid).
 - Consumer IC-to-IC live integration and finalized rejected write: pending.
-- Local CLI `0.39.1` and configured network are verified; live RPC chain
-  identity is blocked because the endpoint returned HTTP 403.
+- Local CLI `0.39.1`, exact RPC, and live StudioNet chain `61999` are verified.
+- An unlocked CLI account must be explicitly identified as Lola's authorized
+  and funded deployment account before any write.
 - Real main and consumer deployments on stable StudioNet 61999: **not performed**.
 - Successful finalization, on-chain lifecycle, source-match proofs: **not performed**.
 - `lolaaa00/recusal` repository creation/commit/push: **not performed**.

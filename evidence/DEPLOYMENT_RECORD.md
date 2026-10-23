@@ -9,7 +9,7 @@ Status: **NOT DEPLOYED**. The fields below intentionally remain pending.
 | RPC | `https://studio.genlayer.com/api` |
 | Local CLI | `genlayer@0.39.1` (verified) |
 | Configured network | `studionet`, chain `61999`, exact RPC (verified by local CLI only) |
-| Live RPC chain identity | **blocked: HTTP 403; guard stopped** |
+| Live RPC chain identity | verified: `eth_chainId=0xf22f` (`61999`) |
 | Main source SHA-256 | recorded in `evidence/LOCAL_CHECKS.md` |
 | Consumer source SHA-256 | recorded in `evidence/LOCAL_CHECKS.md` |
 | Main contract address | pending |
@@ -19,11 +19,12 @@ Status: **NOT DEPLOYED**. The fields below intentionally remain pending.
 | Full lifecycle transaction/receipt links | pending |
 | Actual Direct Mode results | 12 passed locally |
 | GenVM lint/validate/schema/typecheck results | passed for both; zero type diagnostics |
-| CI commit and run URL | blocked: target repo not found; GitHub token invalid |
+| CI commit and run URL | blocked: target repo not found; GitHub auth valid |
 | Source vs deployed bytes match | pending |
 | Consumer accepted/rejected writes | pending |
 | Final review readiness | pending |
 
-No deployment was attempted after the network guard failed. The active CLI
-account was `probe2`; it was not assumed to be Lola's authorized deployment
-account. These facts must not be converted into deployment evidence.
+No deployment has been attempted. The network guard now passes, but the active
+CLI account is `probe2`; it has not been assumed to be Lola's authorized and
+funded deployment account. This fact must not be converted into deployment
+evidence.

@@ -40,7 +40,12 @@ def main():
     request = urllib.request.Request(
         RPC,
         data=json.dumps({"jsonrpc": "2.0", "id": 1, "method": "eth_chainId", "params": []}).encode(),
-        headers={"Content-Type": "application/json"},
+        # StudioNet's edge rejects Python's default urllib user-agent with 403.
+        # Identify this pinned client explicitly; the request remains read-only.
+        headers={
+            "Content-Type": "application/json",
+            "User-Agent": "recusal-network-guard/genlayer-cli-0.39.1",
+        },
         method="POST",
     )
     try:

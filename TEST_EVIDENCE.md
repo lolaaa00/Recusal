@@ -34,12 +34,14 @@ fake GenVM boundary around the actual source.
 
 ## Network and publication gates
 
-The local CLI reports `studionet`, chain `61999`, RPC
-`https://studio.genlayer.com/api`. The independent live JSON-RPC check returned
-HTTP 403, so `scripts/network_guard.py` stopped. No deployment or lifecycle
-transaction was attempted. The target GitHub repository returned “Repository
-not found,” and the configured `lolaaa00` GitHub token is invalid. There is no
-CI run URL or remote commit yet.
+The local CLI and independent live JSON-RPC guard both verify `studionet`, chain
+`61999`, RPC `https://studio.genlayer.com/api`. StudioNet's edge rejected
+Python's default user-agent; the guard now identifies the pinned client and
+receives `eth_chainId = 0xf22f` (61999). No deployment or lifecycle transaction
+has yet been attempted because no listed unlocked account has been identified
+as Lola's authorized deployment account. GitHub authentication for `lolaaa00`
+is valid, but the target repository does not yet exist. There is no CI run URL
+or remote commit yet.
 
-These failures are blockers, not test passes. Re-run all gates after restoring
-RPC access and authorization.
+These missing authorizations are blockers, not test passes. Re-run all gates
+immediately before deployment.

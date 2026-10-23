@@ -111,6 +111,7 @@ denial-of-service risk. See [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
 **Readiness:** 48 offline and 12 Direct Mode tests pass locally, along with the
 pinned GenVM checks, but this remains a reviewable source handoff rather than a
-live deployment claim. The mandatory RPC identity check returned HTTP 403 and
-the target GitHub repository/authorization is unavailable. See
+live deployment claim. The network guard verifies StudioNet 61999, but the
+authorized deployment account is not yet identified and the target GitHub
+repository does not exist. See
 [docs/BUILD_STATUS.md](docs/BUILD_STATUS.md) and [TEST_EVIDENCE.md](TEST_EVIDENCE.md).

@@ -41,9 +41,9 @@ recusal.py         69e3ca2bb03fb5627ee8bf80c41506f20d8779bd6678518fb641b59518a58
 panel_vote_gate.py 14c5c80e1d96294c83ffd647b402f2b1cb4756925730cb60215561abfb3d4b29
 ```
 
-These are test-runtime and static checks only. The configured local CLI reports
-StudioNet 61999 at the exact required RPC, but the independent live chain-ID
-request returned HTTP 403. No RPC write, deployment, wallet signature, CI run,
-source-to-deployed-code match, or finalization was performed. Live IC-to-IC
+These are test-runtime and static checks only. The configured local CLI and
+independent live guard verify StudioNet 61999 at the exact required RPC. No RPC
+write, deployment, wallet signature, CI run, source-to-deployed-code match, or
+finalization was performed. Live IC-to-IC
 integration remains pending for Lola's authorized environment. Never convert
 these results into claims of production or StudioNet deployment success.

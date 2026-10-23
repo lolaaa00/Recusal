@@ -37,11 +37,13 @@ consumer address/digest failures, unselected alternates, and vote replay.
 **NOT READY for live submission.** Source quality gates pass locally, but the
 mandatory external evidence is blocked:
 
-- Intended repository: `https://github.com/lolaaa00/recusal` — not created or
-  not accessible; configured GitHub authorization is invalid.
+- Intended repository: `https://github.com/lolaaa00/recusal` — not yet created;
+  GitHub authorization is valid.
 - Required network: StudioNet `61999`, RPC
-  `https://studio.genlayer.com/api` — CLI configuration matches, but the live
-  chain-ID request returned HTTP 403.
+  `https://studio.genlayer.com/api` — verified by the local CLI and independent
+  live `eth_chainId` request.
+- Deployment account: blocked until Lola identifies which listed unlocked
+  account is authorized and funded.
 - No contract address, finalized transaction, explorer proof, lifecycle
   receipt, consumer deployment, cross-contract live vote, or CI URL exists.
 
