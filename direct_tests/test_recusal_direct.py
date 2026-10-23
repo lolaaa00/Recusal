@@ -18,7 +18,14 @@ CHARTER = (
 @pytest.fixture
 def committee(direct_vm, direct_deploy, direct_alice, direct_bob, direct_charlie, direct_accounts):
     direct_vm.sender = direct_alice
-    instance = direct_deploy("contracts/recusal.py", MATTER, CHARTER, 3, "demo-commit-seed-2026")
+    instance = direct_deploy(
+        "contracts/recusal.py",
+        MATTER,
+        CHARTER,
+        3,
+        "demo-commit-seed-2026",
+        sdk_version="v0.2.12",
+    )
     nominees = [direct_bob, direct_charlie, direct_accounts[3], direct_accounts[4], direct_accounts[5]]
     for index, member in enumerate(nominees):
         instance.nominate(member, index >= 3)
