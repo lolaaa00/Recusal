@@ -39,9 +39,11 @@ The local CLI and independent live JSON-RPC guard both verify `studionet`, chain
 Python's default user-agent; the guard now identifies the pinned client and
 receives `eth_chainId = 0xf22f` (61999). No deployment or lifecycle transaction
 has yet been attempted because no listed unlocked account has been identified
-as Lola's authorized deployment account. GitHub authentication for `lolaaa00`
-is valid, but the target repository does not yet exist. There is no CI run URL
-or remote commit yet.
+as Lola's authorized deployment account. The audited source is published at
+`https://github.com/lolaaa00/Recusal`. GitHub Actions run
+`https://github.com/lolaaa00/Recusal/actions/runs/40010902759` passed both the
+offline and complete GenVM/Direct Mode jobs for commit
+`b092e6c0c620da745515c4f38139297ef6550d4e`.
 
 These missing authorizations are blockers, not test passes. Re-run all gates
 immediately before deployment.

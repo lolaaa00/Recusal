@@ -37,8 +37,9 @@ consumer address/digest failures, unselected alternates, and vote replay.
 **NOT READY for live submission.** Source quality gates pass locally, but the
 mandatory external evidence is blocked:
 
-- Intended repository: `https://github.com/lolaaa00/recusal` — not yet created;
-  GitHub authorization is valid.
+- Repository: `https://github.com/lolaaa00/Recusal` — published. The full
+  verification workflow passed at
+  `https://github.com/lolaaa00/Recusal/actions/runs/40010902759`.
 - Required network: StudioNet `61999`, RPC
   `https://studio.genlayer.com/api` — verified by the local CLI and independent
   live `eth_chainId` request.

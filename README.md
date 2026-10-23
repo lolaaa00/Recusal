@@ -17,7 +17,7 @@ classification. Contract code owns all seat assignments and the vote gate.
 
 ## Scope
 
-- Target repository: `https://github.com/lolaaa00/recusal` (to be created by Lola).
+- Repository: `https://github.com/lolaaa00/Recusal`.
 - Network: **StudioNet `61999`** only, RPC `https://studio.genlayer.com/api`.
 - Local CLI dependency: `genlayer@0.39.1` (never substitute a global preview CLI).
 - Python 3.12+, `genlayer-test==0.29.2`, `genvm-linter==0.11.0`.

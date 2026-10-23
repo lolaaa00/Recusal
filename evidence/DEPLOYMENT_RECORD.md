@@ -4,7 +4,7 @@ Status: **NOT DEPLOYED**. The fields below intentionally remain pending.
 
 | Evidence | Value |
 |---|---|
-| Target owner/repo | `lolaaa00/recusal` |
+| Target owner/repo | `https://github.com/lolaaa00/Recusal` |
 | Network | stable StudioNet, chain `61999` |
 | RPC | `https://studio.genlayer.com/api` |
 | Local CLI | `genlayer@0.39.1` (verified) |
@@ -19,7 +19,7 @@ Status: **NOT DEPLOYED**. The fields below intentionally remain pending.
 | Full lifecycle transaction/receipt links | pending |
 | Actual Direct Mode results | 12 passed locally |
 | GenVM lint/validate/schema/typecheck results | passed for both; zero type diagnostics |
-| CI commit and run URL | blocked: target repo not found; GitHub auth valid |
+| CI commit and run URL | `b092e6c0c620da745515c4f38139297ef6550d4e`; passed: `https://github.com/lolaaa00/Recusal/actions/runs/40010902759` |
 | Source vs deployed bytes match | pending |
 | Consumer accepted/rejected writes | pending |
 | Final review readiness | pending |

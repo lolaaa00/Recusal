@@ -27,14 +27,15 @@
 
 ## To verify before submission
 
-- CI run against the actual `lolaaa00/recusal` GitHub repository: blocked; the
-  repository is not found (GitHub authorization is now valid).
+- Repository publication: `https://github.com/lolaaa00/Recusal`.
+- GitHub Actions: passed for audited source commit `b092e6c0c620da745515c4f38139297ef6550d4e`:
+  `https://github.com/lolaaa00/Recusal/actions/runs/40010902759`.
 - Consumer IC-to-IC live integration and finalized rejected write: pending.
 - Local CLI `0.39.1`, exact RPC, and live StudioNet chain `61999` are verified.
 - An unlocked CLI account must be explicitly identified as Lola's authorized
   and funded deployment account before any write.
 - Real main and consumer deployments on stable StudioNet 61999: **not performed**.
 - Successful finalization, on-chain lifecycle, source-match proofs: **not performed**.
-- `lolaaa00/recusal` repository creation/commit/push: **not performed**.
+- Final documentation/evidence commit and deployment record: pending.
 
 No deployed address, fake hash, invented CI run or fake explorer receipt appears in this handoff.
