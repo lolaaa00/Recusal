@@ -110,8 +110,8 @@ concern slots to introduce dubious allegations; cap exhaustion is a known
 denial-of-service risk. See [docs/THREAT_MODEL.md](docs/THREAT_MODEL.md).
 
 **Readiness:** 48 offline and 12 Direct Mode tests pass locally, along with the
-pinned GenVM checks, but this remains a reviewable source handoff rather than a
-live deployment claim. The network guard verifies StudioNet 61999, but the
-authorized deployment account is not yet identified and the target GitHub
-repository does not exist. See
+pinned GenVM checks. The audited main and consumer contracts are deployed on
+StudioNet 61999 and their finalized lifecycle evidence is recorded in
+`evidence/DEPLOYMENT_RECORD.md`. The source is published at
+<https://github.com/lolaaa00/Recusal>. See
 [docs/BUILD_STATUS.md](docs/BUILD_STATUS.md) and [TEST_EVIDENCE.md](TEST_EVIDENCE.md).

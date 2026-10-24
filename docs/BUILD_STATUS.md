@@ -1,41 +1,24 @@
-# Build status at handoff — 2026-10-23
+# Build and deployment status — 2026-10-24
 
-## Prepared
+Status: **READY**.
 
-- Contract-only Recusal and optional consumer sources.
-- Explicit, immutable committee lifecycle and `BLOCKED` safety state.
-- Validator comparison of independent semantic verdicts, no free-form leader settlement.
-- Bounded public evidence intake, signed nominee disclosures, replay resistance.
-- Seeded deterministic alternate selection, immutable roster digest.
-- Offline adversarial tests executing the actual Python contract source with a fake GenLayer boundary.
-- Real GenLayer Direct Mode test definitions, CI workflow, preflight/source hash checks.
-- Strict StudioNet 61999 pre-deployment guard and detailed runbook.
+- Repository: <https://github.com/lolaaa00/Recusal>
+- StudioNet chain: `61999`; RPC: `https://studio.genlayer.com/api`
+- Main: `0x06da8320F25a48548D7d3cA502Be2E3b6910A255`
+- Consumer: `0x20B2933f1b459034E81b3C0e9f6933301dE7a52b`
+- Digest: `a087de8a85fa68df58cc90434ecbdd3d1596a11d6fd0a3b097527cd5d95ab3fc`
+- Offline pytest: **48 passed**; Direct Mode: **12 passed**; preflight: **22 passed**.
+- GenVM v0.2.12 lint/validate/schema: passed for both; typecheck: zero diagnostics.
+- CI: <https://github.com/lolaaa00/Recusal/actions/runs/40013996862> passed.
 
-## Verified in this environment after hostile review
+Live evidence covers normal finalization, material-conflict exclusion,
+deterministic replacement, ambiguity, insufficient replacements (`BLOCKED`),
+immutable finalization, owner authorization, eligible replacement voting,
+recused and unresolved voter rejection, duplicate rejection, and stale digest
+rejection. Full receipts and source hashes are in
+`evidence/DEPLOYMENT_RECORD.md`.
 
-- Python 3.12.13; offline pytest: **48 passed**.
-- GenLayer Direct Mode (pinned `genlayer-test==0.29.2`): **12 passed**.
-- Combined: **60 passed**.
-- `genvm-linter==0.11.0` `check` for both contracts: **passed** (3 lint checks each, SDK validation passed).
-- ABI extraction: Recusal 16 callable methods (9 view, 7 write); PanelVoteGate 3 (2 view, 1 write).
-- SDK-aware typecheck for both contracts: **0 diagnostics** with
-  `GENVM_VERSION=v0.2.12`.
-- `scripts/preflight.py`: **22 passed** after required handoff artifacts were added.
-- npm lockfile generated for exact `genlayer@0.39.1`.
-- Fixed ambiguous delimiter-based panel commitments, strict digest validation,
-  incomplete hostile consensus coverage, and unpinned CI SDK resolution.
-
-## To verify before submission
-
-- Repository publication: `https://github.com/lolaaa00/Recusal`.
-- GitHub Actions: passed for audited source commit `b092e6c0c620da745515c4f38139297ef6550d4e`:
-  `https://github.com/lolaaa00/Recusal/actions/runs/40010902759`.
-- Consumer IC-to-IC live integration and finalized rejected write: pending.
-- Local CLI `0.39.1`, exact RPC, and live StudioNet chain `61999` are verified.
-- An unlocked CLI account must be explicitly identified as Lola's authorized
-  and funded deployment account before any write.
-- Real main and consumer deployments on stable StudioNet 61999: **not performed**.
-- Successful finalization, on-chain lifecycle, source-match proofs: **not performed**.
-- Final documentation/evidence commit and deployment record: pending.
-
-No deployed address, fake hash, invented CI run or fake explorer receipt appears in this handoff.
+Known limitation: <https://genlayer-explorer.vercel.app> returned
+`DEPLOYMENT_PAUSED` during final verification. Finalized RPC receipts remain
+reproducible with the pinned CLI; no working explorer deep link is claimed
+while that public frontend is unavailable.

@@ -41,9 +41,7 @@ recusal.py         69e3ca2bb03fb5627ee8bf80c41506f20d8779bd6678518fb641b59518a58
 panel_vote_gate.py 14c5c80e1d96294c83ffd647b402f2b1cb4756925730cb60215561abfb3d4b29
 ```
 
-These are test-runtime and static checks only. The configured local CLI and
-independent live guard verify StudioNet 61999 at the exact required RPC. No RPC
-write, deployment, wallet signature, CI run, source-to-deployed-code match, or
-finalization was performed. Live IC-to-IC
-integration remains pending for Lola's authorized environment. Never convert
-these results into claims of production or StudioNet deployment success.
+This section records the local gate at the time it was run; by itself it is not
+deployment proof. The later StudioNet writes, finalized receipts, live
+IC-to-IC integration, and deployed-source checks are separately recorded in
+`evidence/DEPLOYMENT_RECORD.md` so the evidence classes remain distinct.

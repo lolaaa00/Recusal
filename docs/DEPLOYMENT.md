@@ -1,5 +1,14 @@
 # StudioNet 61999 deploy and verification runbook
 
+## Verified deployment
+
+This runbook was completed on 2026-10-24. The verified main address is
+`0x06da8320F25a48548D7d3cA502Be2E3b6910A255`; the digest-bound consumer is
+`0x20B2933f1b459034E81b3C0e9f6933301dE7a52b`. All finalized receipts,
+constructor arguments, state reads, source hashes, and rejected operations are
+in `evidence/DEPLOYMENT_RECORD.md`. The instructions below remain the
+reproduction procedure.
+
 The repository intentionally does **not** deploy automatically. Lola's Codex
 agent must only proceed after source, runtime and network gates are green.
 
